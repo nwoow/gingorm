@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  dt_postgres:
+    image: postgres:12.0-alpine
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=hello_django
+      - POSTGRES_PASSWORD=hello_django
+      - POSTGRES_DB=DT
+
+volumes:
+  postgres_data:
